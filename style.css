@@ -620,6 +620,10 @@ footer {
     transition: color var(--t);
 }
 
+.footer_list a:hover{
+    color: var(--primary);
+}
+
 .footer_socials {
     display: flex;
     gap: 10px;
