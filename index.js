@@ -18,9 +18,7 @@ const projectForm = document.getElementById("projectForm");
 // Open popup
 
 openProjectForm.addEventListener("click", function () {
-
     projectModal.classList.add("active");
-
     document.body.style.overflow = "hidden";
 
 });
