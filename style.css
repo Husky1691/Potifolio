@@ -1040,3 +1040,101 @@ footer {
     }
 
 }
+
+     /* =========================AUTOMATIC LIGHT MODE========================= */
+
+@media (prefers-color-scheme: light) {
+
+    body {
+        background: #ffffff;
+        color: #111111;
+    }
+
+    header {
+        background: rgba(255, 255, 255, 0.85);
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    /* Navigation */
+
+    .link a {
+        color: #111111;
+    }
+
+    /* Hero */
+
+    .hero_desc {
+        color: #555555;
+    }
+
+    /* Sections */
+
+    .section_sub {
+        color: #555555;
+    }
+
+    /* Feature cards */
+
+    .feature_card,
+    .limit_card {
+        background: #f7f7f7;
+        border: 1px solid #e5e5e5;
+    }
+
+    .feature_title,
+    .limit_head_text {
+        color: #111111;
+    }
+
+    .feature_desc,
+    .limit_key {
+        color: #555555;
+    }
+
+    .limit_val {
+        color: #111111;
+    }
+
+    /* About */
+
+    .about_desc {
+        color: #555555;
+    }
+
+    /* Popup */
+
+    .project_card {
+        background: #ffffff;
+        color: #111111;
+        border: 1px solid #dddddd;
+    }
+
+    .project_form_header p {
+        color: #666666;
+    }
+
+    .form_group label {
+        color: #222222;
+    }
+
+    .form_group input,
+    .form_group select,
+    .form_group textarea {
+        background: #f5f5f5;
+        color: #111111;
+        border: 1px solid #dddddd;
+    }
+
+    .project_close {
+        background: #eeeeee;
+        color: #111111;
+    }
+
+    /* Footer */
+
+    footer {
+        background: #f5f5f5;
+        color: #111111;
+    }
+
+}
