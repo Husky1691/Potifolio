@@ -767,3 +767,272 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==================================================================== */
+
+/* =================================
+   PROJECT FORM POPUP
+================================= */
+
+.project_modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.project_modal.active {
+    display: flex;
+}
+
+
+/* Dark + Blur Background */
+
+.project_overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* Popup Card */
+
+.project_card {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 35px;
+
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+
+    animation: projectPopup 0.3s ease;
+}
+
+
+/* Popup Animation */
+
+@keyframes projectPopup {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Close Button */
+
+.project_close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.project_close:hover {
+    background: #ff3333;
+}
+
+
+/* Header */
+
+.project_form_header {
+    margin-bottom: 25px;
+}
+
+.project_form_header h2 {
+    margin: 8px 0;
+
+    font-size: 30px;
+}
+
+.project_form_header h2 span {
+    color: #b0ff00;
+}
+
+.project_form_header p {
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* Form */
+
+.form_group {
+    margin-bottom: 18px;
+}
+
+.form_group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+.form_group input,
+.form_group select,
+.form_group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: #181818;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+
+    transition: 0.3s;
+
+    box-sizing: border-box;
+}
+
+
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus {
+
+    border-color: #b0ff00;
+
+    box-shadow: 0 0 0 2px rgba(176, 255, 0, 0.08);
+}
+
+
+.form_group textarea {
+    resize: vertical;
+}
+
+
+/* Select */
+
+.form_group select {
+    cursor: pointer;
+}
+
+
+/* Two Inputs Side By Side */
+
+.form_row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* Submit Button */
+
+.project_submit {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #b0ff00;
+
+    color: #000;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.project_submit:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(176, 255, 0, 0.2);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .project_card {
+
+        padding: 25px 20px;
+
+        border-radius: 16px;
+
+    }
+
+    .project_form_header h2 {
+
+        font-size: 24px;
+
+    }
+
+    .form_row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+}
