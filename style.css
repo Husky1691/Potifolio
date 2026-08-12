@@ -70,7 +70,7 @@ body {
 /* header styles */
 header {
     margin-top: 30px;
-      position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -95,7 +95,7 @@ nav {
     /* border: 1px solid #9C040B; */
     border: 1px solid rgba(220, 38, 38, 0.22);
     border-radius: 10rem;
-   
+
 }
 
 /* nav styles */
@@ -312,12 +312,12 @@ nav {
     gap: 8px;
 }
 
-.hero_trust_item i{
+.hero_trust_item i {
     font-size: 16px;
     color: var(--primary);
 }
 
-  /* Capabilities */
+/* Capabilities */
 
 .section_head {
     text-align: center;
@@ -390,7 +390,7 @@ nav {
     border: 1px solid var(--border);
 }
 
-.feature_icon i{
+.feature_icon i {
     font-size: 28px;
     color: var(--primary);
 }
@@ -402,7 +402,7 @@ nav {
     color: var(--text);
 }
 
-.feature_desc{
+.feature_desc {
     font-size: 14px;
     color: #a1a1aa;
     line-height: 1.7;
@@ -480,9 +480,9 @@ nav {
     position: relative;
 }
 
-.limit_head i{
-     font-size: 26px;
-     color: var(--primary);
+.limit_head i {
+    font-size: 26px;
+    color: var(--primary);
 }
 
 .limit_head_text {
@@ -553,10 +553,10 @@ nav {
     color: var(--primary-bright);
 }
 
-.btn_outline i{
-font-size: 26px;
-color: #fafafa;
-margin-right: 4px;
+.btn_outline i {
+    font-size: 20px;
+    color: #fafafa;
+    margin-right: 4px;
 }
 
 
@@ -639,6 +639,10 @@ footer {
     transition: all var(--t);
 }
 
+.footer_social i {
+    font-size: 20px;
+}
+
 .footer_social:hover {
     background: var(--primary);
     color: #fff;
@@ -685,13 +689,12 @@ footer {
         margin-bottom: 48px;
     }
 
-        .about_grid {
+    .about_grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
-        .footer_grid
-    {
+    .footer_grid {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -714,8 +717,7 @@ footer {
         display: flex;
     }
 
-        .footer_grid
-   {
+    .footer_grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
@@ -726,11 +728,11 @@ footer {
         width: 100%;
     }
 
-        .section_head{
+    .section_head {
         margin-bottom: 36px;
     }
 
-    .feature_card{
+    .feature_card {
         padding: 22px 20px;
     }
 
@@ -747,33 +749,32 @@ footer {
         padding: 6px 12px;
     }
 
-        .cta_section
- {
+    .cta_section {
         padding: 72px 20px;
     }
 
-        .cta_actions {
+    .cta_actions {
         flex-direction: column;
         align-items: stretch;
     }
+
     footer {
         padding: 48px 20px 28px;
     }
 
-        .footer-grid {
+    .footer-grid {
         grid-template-columns: 1fr;
         gap: 28px;
     }
 }
 
 @media (max-width: 560px) {
-    .features_grid{
+    .features_grid {
         grid-template-columns: 1fr;
     }
 }
 
 
-/* ==================================================================== */
 
 /* =================================
    PROJECT FORM POPUP
@@ -1041,7 +1042,7 @@ footer {
 
 }
 
-     /* =========================AUTOMATIC LIGHT MODE========================= */
+/* =========================AUTOMATIC LIGHT MODE========================= */
 
 @media (prefers-color-scheme: light) {
 
