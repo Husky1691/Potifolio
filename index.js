@@ -6,6 +6,8 @@ const projectModal = document.getElementById("projectModal");
 
 const openProjectForm = document.getElementById("openProjectForm");
 
+const getStartedBtn = document.getElementById("getStartedBtn");
+
 const closeProjectForm = document.getElementById("closeProjectForm");
 
 const projectOverlay = document.querySelector(".project_overlay");
@@ -21,6 +23,11 @@ openProjectForm.addEventListener("click", function () {
 
     document.body.style.overflow = "hidden";
 
+});
+
+getStartedBtn.addEventListener("click", function () {
+    projectModal.classList.add("active");
+    document.body.style.overflow = "hidden";
 });
 
 
