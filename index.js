@@ -73,12 +73,12 @@ projectForm.addEventListener("submit", function (event) {
 
     // Create WhatsApp message
     const whatsappMessage =
-`*NEW PROJECT REQUEST*
-*Name:* ${name}
-*Email:* ${email}
-*Phone:* ${phone}
-*Project Type:* ${projectType}
-*Project Description:*
+`****8NEW PROJECT REQUEST****
+ Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Project Type: ${projectType}
+Project Description:
 ${message}
 
 ----------------------
