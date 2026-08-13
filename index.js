@@ -1,4 +1,27 @@
 // =================================
+// NAV TOGGLE
+// =================================
+
+const navToggle = document.querySelector(".nav_toggle");
+const nav = document.querySelector("nav");
+
+// Open / close menu
+navToggle.addEventListener("click", function () {
+    nav.classList.toggle("nav_open");
+});
+
+
+// Close menu when a link is clicked
+const navLinks = document.querySelectorAll(".nav_link .link a");
+navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        nav.classList.remove("nav_open");
+    });
+
+});
+
+
+// =================================
 // PROJECT FORM POPUP
 // =================================
 

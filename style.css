@@ -195,6 +195,8 @@ nav {
     margin: 2px;
 }
 
+
+/* Home Section */
 .hero {
     position: relative;
     padding: 96px 24px 88px;
@@ -207,6 +209,13 @@ nav {
     z-index: 1;
     max-width: 920px;
     margin: 0 auto;
+}
+
+.hero_logo {
+    width: 130px;
+    height: 130px;
+    filter: drop-shadow(rgba(220, 38, 38, 0.7) 0px 0px 18px) drop-shadow(rgba(220, 38, 38, 0.4) 0px 0px 40px);
+    margin: 8em auto 32px;
 }
 
 .hero h1 {
@@ -240,7 +249,6 @@ nav {
     margin: 0 auto 44px;
     line-height: 1.7;
 }
-
 
 
 .hero_action {
@@ -707,6 +715,7 @@ footer {
 @media (max-width: 880px) {
     nav {
         margin: 0 20px;
+        position: relative;
     }
 
     .nav_link {
@@ -719,6 +728,144 @@ footer {
 
     .nav_toggle {
         display: flex;
+    }
+
+ /* Hide navigation by default */
+
+    .nav_link {
+        display: none;
+    }
+
+    /* When menu is opened */
+
+    nav.nav_open {
+        position: relative;
+
+        min-height: 260px;
+
+        background: rgba(10, 10, 10, 0.95);
+
+        border: 1px solid rgba(255, 50, 50, 0.35);
+
+        border-radius: 25px;
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        padding-bottom: 20px;
+    }
+
+
+    /* Show menu */
+
+    nav.nav_open .nav_link {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        /* width: 100%; */
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 65px 16px 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Links */
+
+    nav.nav_open .link {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+    }
+
+
+    nav.nav_open .link a {
+        display: block;
+        /* width: 100%; */
+        color: #aaa;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+
+    nav.nav_open .link a:hover {
+        color: white;
+    }
+
+
+    /* Login button */
+
+    nav.nav_open .redbtn {
+        margin-top: 5px;
+    }
+
+    nav.nav_open .redbtn a {
+        background: #e52323;
+        color: white;
+        border-radius: 30px;
+        font-weight: 600;
+    }
+
+
+    /* Keep logo at top */
+
+    nav.nav_open .nav_logo {
+        position: absolute;
+
+        top: 22px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        z-index: 5;
+    }
+
+
+    /* Keep hamburger at top right */
+    nav.nav_open .nav_toggle {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        z-index: 10;
+    }
+
+
+
+    /* change  humburger to times */
+        .nav_toggle {
+        cursor: pointer;
+    }
+
+    .toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin: 4px 0;
+        background: currentColor;
+        transition: 0.3s;
+    }
+
+
+    /* Change hamburger into X */
+    nav.nav_open .toggle span:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    nav.nav_open .toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav.nav_open .toggle span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .footer_grid {
@@ -819,30 +966,21 @@ footer {
 .project_card {
     position: relative;
     z-index: 2;
-
     width: 100%;
     max-width: 600px;
-
     max-height: 90vh;
     overflow-y: auto;
-
     padding: 35px;
-
     background: #111;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
+    border: 1px solid var(--border);
     border-radius: 20px;
-
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
-
     animation: projectPopup 0.3s ease;
 }
 
 
 /* Popup Animation */
-
 @keyframes projectPopup {
-
     from {
         opacity: 0;
         transform: translateY(30px) scale(0.95);
@@ -857,27 +995,18 @@ footer {
 
 
 /* Close Button */
-
 .project_close {
     position: absolute;
-
     top: 15px;
     right: 18px;
-
     width: 35px;
     height: 35px;
-
     border: none;
     border-radius: 50%;
-
     background: rgba(255, 255, 255, 0.08);
-
     color: white;
-
     font-size: 25px;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -887,19 +1016,18 @@ footer {
 
 
 /* Header */
-
 .project_form_header {
     margin-bottom: 25px;
 }
 
 .project_form_header h2 {
     margin: 8px 0;
-
     font-size: 30px;
+    color: #fafafa;
 }
 
 .project_form_header h2 span {
-    color: #b0ff00;
+    color: var(--primary);
 }
 
 .project_form_header p {
@@ -909,16 +1037,13 @@ footer {
 
 
 /* Form */
-
 .form_group {
     margin-bottom: 18px;
 }
 
 .form_group label {
     display: block;
-
     margin-bottom: 7px;
-
     font-size: 14px;
     color: #ddd;
 }
@@ -927,25 +1052,15 @@ footer {
 .form_group input,
 .form_group select,
 .form_group textarea {
-
     width: 100%;
-
     padding: 13px 15px;
-
     background: #181818;
-
-    border: 1px solid #333;
-
+    border: 1px solid var(--border);
     border-radius: 10px;
-
     color: white;
-
     outline: none;
-
     font-family: inherit;
-
     transition: 0.3s;
-
     box-sizing: border-box;
 }
 
@@ -954,7 +1069,7 @@ footer {
 .form_group select:focus,
 .form_group textarea:focus {
 
-    border-color: #b0ff00;
+    border-color: var(--primary);
 
     box-shadow: 0 0 0 2px rgba(176, 255, 0, 0.08);
 }
@@ -966,88 +1081,60 @@ footer {
 
 
 /* Select */
-
 .form_group select {
     cursor: pointer;
 }
 
 
 /* Two Inputs Side By Side */
-
 .form_row {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 15px;
 }
 
 
 /* Submit Button */
-
 .project_submit {
-
     width: 100%;
-
     padding: 14px;
-
     border: none;
-
-    border-radius: 10px;
-
-    background: #b0ff00;
-
-    color: #000;
-
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fafafa;
     font-size: 15px;
-
     font-weight: 700;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 
 .project_submit:hover {
-
     transform: translateY(-2px);
-
     box-shadow: 0 10px 25px rgba(176, 255, 0, 0.2);
 }
 
 
 /* Mobile */
-
 @media (max-width: 600px) {
 
     .project_card {
-
         padding: 25px 20px;
-
         border-radius: 16px;
-
     }
 
     .project_form_header h2 {
-
         font-size: 24px;
-
     }
 
     .form_row {
-
         grid-template-columns: 1fr;
-
         gap: 0;
-
     }
 
 }
 
 /* =========================AUTOMATIC LIGHT MODE========================= */
-
 @media (prefers-color-scheme: light) {
 
     body {
