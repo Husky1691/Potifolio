@@ -935,11 +935,9 @@ footer {
     position: fixed;
     inset: 0;
     z-index: 9999;
-
     display: none;
     align-items: center;
     justify-content: center;
-
     padding: 20px;
 }
 
@@ -947,22 +945,17 @@ footer {
     display: flex;
 }
 
-
 /* Dark + Blur Background */
-
 .project_overlay {
     position: absolute;
     inset: 0;
-
     background: rgba(0, 0, 0, 0.65);
-
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 
 /* Popup Card */
-
 .project_card {
     position: relative;
     z-index: 2;
@@ -1070,7 +1063,6 @@ footer {
 .form_group textarea:focus {
 
     border-color: var(--primary);
-
     box-shadow: 0 0 0 2px rgba(176, 255, 0, 0.08);
 }
 
@@ -1111,7 +1103,6 @@ footer {
 
 .project_submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(176, 255, 0, 0.2);
 }
 
 
@@ -1148,25 +1139,21 @@ footer {
     }
 
     /* Navigation */
-
     .link a {
         color: #111111;
     }
 
     /* Hero */
-
     .hero_desc {
         color: #555555;
     }
 
     /* Sections */
-
     .section_sub {
         color: #555555;
     }
 
     /* Feature cards */
-
     .feature_card,
     .limit_card {
         background: #f7f7f7;
@@ -1194,7 +1181,6 @@ footer {
     }
 
     /* Popup */
-
     .project_card {
         background: #ffffff;
         color: #111111;
