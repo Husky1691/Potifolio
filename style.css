@@ -215,7 +215,7 @@ nav {
     width: 130px;
     height: 130px;
     filter: drop-shadow(rgba(220, 38, 38, 0.7) 0px 0px 18px) drop-shadow(rgba(220, 38, 38, 0.4) 0px 0px 40px);
-    margin: 2em auto 32px;
+    margin: 8em auto 32px;
 }
 
 .hero h1 {
